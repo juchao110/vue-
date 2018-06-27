@@ -44,12 +44,15 @@ export default {
             this.currentPage = this.currentPage + 1
             this.$http.get(`wap/match/buy/purchase_list?page=${this.currentPage}`).then((data) => {
               if (data.data.data.list.length == 0) {
-                  return
+                 done()
+                 return
               }
               done()
               this.purchaseData = data.data.data
               this.listDataList = [...this.listDataList, ...data.data.data.list]
-            })
+          }).catch((err)=>{
+              done()
+          })
         }, 1500)
     },
 
