@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Upload from '@/components/upload'
 import Scroll from '@/components/scroll'
+import VueScroll from '@/components/scroll2'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/scroll',
       name: 'Scroll',
       component: Scroll
+    },
+    {
+      path: '/vuescroll',
+      name: 'VueScroll',
+      component: VueScroll
     }
   ]
 })
