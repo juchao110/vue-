@@ -5,6 +5,9 @@ import App from './App'
 import router from './router'
 import './assets/rem.js'
 import './assets/lrz.js'
+import '../build/api.js'
+var infiniteScroll = require('vue-infinite-scroll');
+Vue.use(infiniteScroll)
 var VueTouch = require('vue-touch')
 Vue.use(VueTouch, {
   name: 'v-touch'
