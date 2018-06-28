@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './assets/swiper.min.css'
 import './assets/rem.js'
 import './assets/lrz.js'
 import '../build/api.js'

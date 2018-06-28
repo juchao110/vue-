@@ -33,18 +33,20 @@ export default {
     },
     methods:{
         getData(page){
-            this.$http.get(`wap/match/buy/purchase_list?page=${page}`).then(data => {
+            this.$http.get(`wap/match/buy/purchase_list?province_id=1&page=${page}`).then(data => {
                 this.listData = data.data.data
                 this.listDataList = data.data.data.list
             })
         },
         infinite (done) {
+
         setTimeout(() => {
             console.log('加载更多')
             this.currentPage = this.currentPage + 1
-            this.$http.get(`wap/match/buy/purchase_list?page=${this.currentPage}`).then((data) => {
+            this.$http.get(`wap/match/buy/purchase_list?province_id=1&page=${this.currentPage}`).then((data) => {
               if (data.data.data.list.length == 0) {
-                 done()
+                  this.$refs.scroll.finishInfinite(1)
+                  this.$refs.scroll.noDataText=""
                  return
               }
               done()

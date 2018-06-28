@@ -16,6 +16,7 @@
      <router-link tag="button" to="/upload" type="button" name="button">压缩图片</router-link>
      <router-link tag="button" to="/scroll" type="button" name="button">无限滚动</router-link>
      <router-link tag="button" to="/vuescroll" type="button" name="button">vue-scroll</router-link>
+     <router-link tag="button" to="/swiper" type="button" name="button">swiper</router-link>
   </div>
 </template>
 

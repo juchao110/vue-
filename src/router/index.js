@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Upload from '@/components/upload'
 import Scroll from '@/components/scroll'
 import VueScroll from '@/components/scroll2'
+import Swiper from '@/components/swiper'
 
 Vue.use(Router)
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/vuescroll',
       name: 'VueScroll',
       component: VueScroll
+    },
+    {
+      path: '/swiper',
+      name: 'Swiper',
+      component: Swiper
     }
   ]
 })
